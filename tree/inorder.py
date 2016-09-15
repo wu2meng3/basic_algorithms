@@ -16,7 +16,7 @@ def inorderTraversal(root):
     traversal(root, result)
     return result
 
-def inorderTraversalRecurse(root):
+def inorderTraversalIterative(root):
     result, stack = [], []
     while True:
         while root:
@@ -43,4 +43,4 @@ n2.right = n5
 n3.left = n6
 n3.right = n7
 print inorderTraversal(n1)
-print inorderTraversalRecurse(n1)
+print inorderTraversallIterative(n1)

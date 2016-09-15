@@ -17,7 +17,7 @@ def preorderTraversal(root):
     return result
 
 
-def preorderTraversalRecurse(root):
+def preorderTraversallIterative(root):
     result, stack = [], []
     while True:
         while root:
@@ -43,4 +43,4 @@ n2.right = n5
 n3.left = n6
 n3.right = n7
 print preorderTraversal(n1)
-print preorderTraversalRecurse(n1)
+print preorderTraversallIterative(n1)

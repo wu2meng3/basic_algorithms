@@ -16,6 +16,18 @@ def postorderTraversal(root):
     traversal(root, result)
     return result
 
+def postorderTraversalIterative(root):
+    result, stack = [], []
+    while True:
+        while root:
+            stack.append(root)
+            result.insert(0, root.val)
+            root = root.right
+        if not stack:
+            return result
+        node = stack.pop()
+        root = node.left
+
 
 n1 = TreeNode(1)
 n2 = TreeNode(2)
@@ -31,3 +43,4 @@ n2.right = n5
 n3.left = n6
 n3.right = n7
 print postorderTraversal(n1)
+print postorderTraversalIterative(n1)
