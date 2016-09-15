@@ -16,6 +16,18 @@ def inorderTraversal(root):
     traversal(root, result)
     return result
 
+def inorderTraversalRecurse(root):
+    result, stack = [], []
+    while True:
+        while root:
+            stack.append(root)
+            root = root.left
+        if not stack:
+            return result
+        node = stack.pop()
+        result.append(node.val)
+        root = node.right
+
 
 n1 = TreeNode(1)
 n2 = TreeNode(2)
@@ -31,3 +43,4 @@ n2.right = n5
 n3.left = n6
 n3.right = n7
 print inorderTraversal(n1)
+print inorderTraversalRecurse(n1)
