@@ -1,4 +1,5 @@
 # this is taken from leetcode P307 about sum range query
+# complexity: O(log n) for both update and query
 class Node:
     def __init__(self, start, end):
         self.start = start   # the start index of the interval in the nums (inclusive)
