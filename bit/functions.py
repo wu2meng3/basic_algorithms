@@ -23,6 +23,9 @@ def getSubstractionPositive(a, b):
 
     return a
 
+# this function returns the negative number of a: -a
+def getNegative(a):
+    return ~a + 1
 
 # this function computes the sum of two integers
 
@@ -41,3 +44,4 @@ print getSumPositive(1,2)
 print getSum(-3, 4)
 print getSum(-100, 1)
 print getSubstractionPositive(10, 2)
+print getNegative(-4)
