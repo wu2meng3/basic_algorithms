@@ -18,7 +18,7 @@ def KMP(pattern, s):
                 i += 1
 
 def computeLPS(pattern, m, lps):
-    length = 0
+    length = 0 # length of previous longest prefix suffix
     i = 1
     while i < m:
         if pattern[i] == pattern[length]:
@@ -27,7 +27,7 @@ def computeLPS(pattern, m, lps):
             i += 1
         else:
             if length != 0:
-                length = lps[length - 1]
+                length = lps[length - 1] # the hardest part
             else:
                 lps[i] = 0
                 i += 1
