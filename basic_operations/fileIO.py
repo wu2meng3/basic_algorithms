@@ -1,4 +1,6 @@
 
+import os.path
+
 fileName = 'test.txt'
 
 # read by line
@@ -23,3 +25,9 @@ with open(fileName) as f:
         if not buf:
             break
         print buf
+
+
+if os.path.exists('tes.txt'):
+    print "yes"
+else:
+    print "no"
